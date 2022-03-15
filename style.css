@@ -1,0 +1,39 @@
+#Logo {
+    font-family: 'Rochester';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    /* identical to box height */
+    color: #000000;
+}
+
+#Superior {
+    height: 10vh;
+}
+
+#Banner {
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+a {
+    font-weight: 400;
+    color: white;
+}
+
+.navbar-nav>li {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#Seleccionado {
+    text-align: center;
+}
+
+#card {
+    width: 100rem;
+}
