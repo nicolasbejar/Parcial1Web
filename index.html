@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
 
     <title>Ejericio</title>
 </head>
@@ -23,36 +24,109 @@
     <script src="main.js"></script>
 
     <!-- Header-->
-    <div id="Superior">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <h1 id="Logo">Restaurante & Lounge</h1>
+            <div class="col-10 col-lg-1 order-lg-2 d-flex justify-content-end">
+                <svg id="Carrito" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                    <path   d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                </svg>
             </div>
-            <div class="col">
-                <img id="Carrito" src="./media/carrito.jpg"></img>
+            <div class="col-2 col-lg-1 order-lg-3 my-auto">
+                <p id="Items"></p>
+            </div>
+            <div class="col-12 col-lg-10 order-lg-1">
+                <h1>Hamburger & Lounge</h1>
             </div>
         </div>
+        <hr class="d-none d-sm-block">
     </div>
 
     <!-- Banner-->
-    <img id="Banner" src="./media/banner.jpg"></img>
-
+    <div>
+        <div class="d-none d-sm-block">
+            <img id="Banner" src="./media/banner.jpg"></img>
+        </div>
+    </div>
+    <hr class="d-none d-sm-block">
 
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav id="navsita" class="navbar navbar-expand-lg navbar-dark navbar-amarillo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul id="Textos" class="navbar-nav">
             </ul>
         </div>
     </nav>
+    <div class="container">
+        <!--Centro-->
+        <div>
+            <h3 id="Seleccionado">BURGERS</h3>
+        </div>
+        <hr>
 
-    <!--Centro-->
-    <h3 id="Seleccionado">Burgers</h3>
+        <!--Cards-->
+        <div id="Cards" class="row">
+        </div>
 
-    <!--Cards-->
-    <div id="Cards" class="card-deck">
+        <!--Order-->
+        <div id="Order">
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="OrderTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Qty.</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Unit price</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Modify</th>
+                            </tr>
+                        </thead>
+                        <tbody id="OrderBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 col-lg-8">
+                    <p><strong id="TotPrecio"></strong></p>
+                </div>
+                <div class="col-11 col-lg-4">
+                    <button class="btn btn-danger" id="Cancel"> Cancel Order </button>
+                    <button class="btn btn-success" id="Confirm"> Confirm Order</button>
+                </div>
+            </div>
+        </div>
+        <!--Popup-->
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="popup-content">
+                    <h2>Cancel the order</h2>
+                    <hr class="d-none d-sm-block">
+                    <p>Are you sure about cancelling the order?</p>
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                        <button class="btn btn-success" id="Terminar"> Yes, I want to cancel the order</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-danger" id="Continuar"> No, I want to continue adding products</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contacto-->
+        <div class="row justify-content-center">
+            <div class="col-md-6 offset-md-3">
+                <p>Contact us: +57 3102105253 - info@restaurant.com - @restaurant</p>
+            </div>
+        </div>
 
     </div>
+
+
 </body>
 
 </html>
